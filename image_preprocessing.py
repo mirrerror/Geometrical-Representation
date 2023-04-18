@@ -12,6 +12,7 @@ def resize():
 
 
 def crop():
+    print("Hello, world")
     pass
 
 def detect_edge(img):
