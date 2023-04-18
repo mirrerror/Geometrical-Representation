@@ -32,7 +32,7 @@ def crop(img, top_left, bottom_right, save_to_file=False, output_file_name='crop
     return cropped_img
 
 
-def detect_edges(img):
+def detect_edges(img, save_to_file=False, output_file_name='edges.png'):
     # Convert the image to grayscale
     gray = grayscale_conversion(img)
 
@@ -42,32 +42,43 @@ def detect_edges(img):
     # Apply Canny edge detection to the image
     edges = cv2.Canny(blurred, 100, 200)
 
+    if save_to_file:
+        cv2.imwrite(output_file_name, edges)
     # Return the edge map
     return edges
 
 
-def thresholding(img, threshold_value):
+def thresholding(img, threshold_value, save_to_file=False, output_file_name='thresholding.png'):
     # Convert the image to grayscale
     gray = grayscale_conversion(img)
 
     # Apply thresholding to the image
     ret, thresh = cv2.threshold(gray, threshold_value, 255, cv2.THRESH_BINARY)
 
+    if save_to_file:
+        cv2.imwrite(output_file_name, thresh)
     # Return the binary image
     return thresh
 
 
-def contrast_adjustment(img):
+def contrast_adjustment(img, save_to_file=False, output_file_name='contrast.png'):
     # Convert the image to grayscale
     gray = grayscale_conversion(img)
 
     # Apply histogram equalization to the image
     equalized = cv2.equalizeHist(gray)
 
+    if save_to_file:
+        cv2.imwrite(output_file_name, equalized)
     # Return the equalized image
     return equalized
 
 
-def smoothing():
-    pass
+def gaussian_blur(img, save_to_file=False, output_file_name='gaussian_blur.png'):
+    # Apply Gaussian blur
+    blur = cv2.GaussianBlur(img, (5, 5), 0)
+
+    if save_to_file:
+        cv2.imwrite(output_file_name, blur)
+    return blur
 
