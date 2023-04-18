@@ -12,8 +12,6 @@ def resize():
 def crop():
     pass
 
-
-def detect_edge():
 def detect_edge(img):
     # Convert the image to grayscale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -38,7 +36,6 @@ def thresholding(img, threshold_value):
     # Convert the image to grayscale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-def thresholding():
     # Apply thresholding to the image
     ret, thresh = cv2.threshold(gray, threshold_value, 255, cv2.THRESH_BINARY)
 
@@ -54,7 +51,6 @@ def contrast_adjustment(img):
     # Convert the image to grayscale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-def contrast_adjustment():
     # Apply histogram equalization to the image
     equalized = cv2.equalizeHist(gray)
 
