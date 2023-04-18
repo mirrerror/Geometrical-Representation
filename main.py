@@ -12,3 +12,5 @@ img_loader.show_image(img_preproc.resize(img, new_size, True))
 top_left = (0, 0)
 bottom_right = (100, 300)
 img_loader.show_image(img_preproc.crop(img, top_left, bottom_right, True))
+
+#pula
