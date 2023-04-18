@@ -8,6 +8,8 @@ def grayscale_conversion():
 def resize():
     pass
 
+#aslnalsdald
+
 
 def crop():
     pass
