@@ -32,7 +32,7 @@ def crop(img, top_left, bottom_right, save_to_file=False, output_file_name='crop
     return cropped_img
 
 
-def detect_edge(img):
+def detect_edges(img):
     # Convert the image to grayscale
     gray = grayscale_conversion(img)
 
