@@ -13,4 +13,7 @@ top_left = (0, 0)
 bottom_right = (100, 300)
 img_loader.show_image(img_preproc.crop(img, top_left, bottom_right, True))
 
-#pula
+img_loader.show_image(img_preproc.thresholding(img, 128, True))
+img_loader.show_image(img_preproc.contrast_adjustment(img, True))
+img_loader.show_image(img_preproc.detect_edges(img, True))
+img_loader.show_image(img_preproc.gaussian_blur(img, True))
