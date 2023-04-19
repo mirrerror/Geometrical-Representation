@@ -6,14 +6,14 @@ def grayscale_conversion():
 
 
 def resize():
+    
     pass
 
 #aslnalsdald
 
 
 def crop():
-    print("Hello, worldasda")
-    print("alsldnald")
+
     pass
 
 def detect_edge(img):
